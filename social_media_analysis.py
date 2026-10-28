@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Social Media Usage Dataset
 data = {
     "Platform": [
         "Instagram",
@@ -14,12 +13,9 @@ data = {
 }
 
 df = pd.DataFrame(data)
-
-# Display dataset
 print("SOCIAL MEDIA USAGE ANALYSIS")
 print(df.to_string(index=False))
 
-# Calculate statistics
 total = df["Hours_Per_Day"].sum()
 average = df["Hours_Per_Day"].mean()
 most_used = df.loc[df["Hours_Per_Day"].idxmax()]
@@ -29,7 +25,6 @@ print("Average usage:", round(average, 2), "hours")
 print("Most used platform:", most_used["Platform"])
 print("Usage time:", most_used["Hours_Per_Day"], "hours")
 
-# Colourful bar chart
 colors = [
     "#E1306C", "#FF0000", "#1877F2",
     "#FFCC00", "#25D366"
